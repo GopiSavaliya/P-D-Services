@@ -21,7 +21,8 @@
         android:layout_marginTop="16dp"
         android:hint="@string/email_id_or_username_or_phone_number"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:background="@drawable/edit_text_background"/>
 
     <EditText
         android:id="@+id/password"
@@ -30,15 +31,18 @@
         android:layout_marginTop="16dp"
         android:hint="Password"
         android:inputType="textPassword"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:background="@drawable/edit_text_background"/>
 
     <TextView
+        android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password?"
         android:layout_marginTop="16dp"
         android:textSize="16sp"
         android:textStyle="bold"/>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -59,16 +63,19 @@
 
 
         <ImageView
+            android:id="@+id/gmail_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/google_icon"
             android:layout_marginRight="8dp"/>
         <ImageView
+            android:id="@+id/facebook_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/facebook_icon"
             android:layout_marginRight="8dp"/>
         <ImageView
+            android:id="@+id/instagram_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/instagram_icon"/>
@@ -78,6 +85,7 @@
 
 
     <Button
+        android:id="@+id/sign_in_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -87,12 +95,13 @@
         />
 
     <TextView
+        android:id="@+id/create_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Account"
         android:layout_gravity="center"
         android:textSize="16sp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:textStyle="bold"
         android:textColor="@color/green"/>
 
