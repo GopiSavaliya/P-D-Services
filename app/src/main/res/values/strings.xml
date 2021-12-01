@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">P&amp;D Services</string>
+    <string name="email_id_or_username_or_phone_number">Email Id or Username or Phone Number</string>
 </resources>
