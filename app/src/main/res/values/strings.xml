@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">P&amp;D Services</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="email_id_or_username_or_phone_number">Email Id or Username or Phone Number</string>
+    <string name="explore">Explore</string>
+    <string name="requests">Requests</string>
+    <string name="activity">Activity</string>
+    <string name="requestPool">Request Pool</string>
+    <string name="requestParcel">Request Parcel</string>
+    <string name="scheduleRide">Schedule Ride</string>
+    <string name="confirm">Confirm</string>
+    <string name="delete">Delete</string>
+    <string name="matching">Matching</string>
+    <string name="view_requests"><![CDATA[View Requests ->]]></string>
+    <string name="add_notes"><![CDATA[Add Notes ->]]></string>
+    <string name="waiting_for_pick_up">Waiting for pick-up</string>
+    <string name="on_the_way">On the way</string>
+    <string name="track_package"><![CDATA[Track Package ->]]></string>
+    <string name="finish"><![CDATA[Finish ->]]></string>
+    <string name="more_details">More details</string>
 </resources>
