@@ -19,4 +19,9 @@
     <string name="track_package"><![CDATA[Track Package ->]]></string>
     <string name="finish"><![CDATA[Finish ->]]></string>
     <string name="more_details">More details</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_in_using_socials">Sign In using socials</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Create Account</string>
 </resources>

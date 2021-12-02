@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign In"
+        android:text="@string/sign_in"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginTop="32dp"/>
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:background="@drawable/edit_text_background"/>
@@ -39,7 +39,7 @@
         android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forgot Password?"
+        android:text="@string/forgot_password"
         android:layout_marginTop="16dp"
         android:textSize="16sp"
         android:textStyle="bold"/>
@@ -48,7 +48,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign In using socials"
+        android:text="@string/sign_in_using_socials"
         android:layout_marginTop="96dp"
         android:layout_gravity="center"
         android:textSize="16sp"
@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="80dp"
-        android:text="Sign In"
+        android:text="@string/sign_in"
         android:background="@drawable/round_button"
         app:backgroundTint="@color/green"
         />
@@ -100,7 +100,7 @@
         android:id="@+id/create_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Account"
+        android:text="@string/create_account"
         android:layout_gravity="center"
         android:textSize="16sp"
         android:layout_marginTop="8dp"
