@@ -9,16 +9,16 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/parcel_delivered_img"
+            android:id="@+id/carpool_onway_img"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_margin="10dp"
-            android:src="@drawable/ic_package"
+            android:src="@drawable/ic_car"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/parcel_delivered_name"
+            android:id="@+id/carpool_onway_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -27,21 +27,22 @@
             android:text="source -> Destination"
             android:textColor="@color/black"
             android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/parcel_delivered_img"
+            app:layout_constraintStart_toEndOf="@+id/carpool_onway_img"
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
+            android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginTop="8dp"
             android:background="#c0c0c0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/parcel_waiting_name" />
+            app:layout_constraintTop_toBottomOf="@+id/carpool_onway_name" />
 
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/parcel_delivered_profile_img"
+            android:id="@+id/carpool_onway_profile_img"
             app:civ_border_width="1dp"
             android:layout_centerInParent="true"
             android:src="@drawable/men"
@@ -50,53 +51,65 @@
             android:layout_height="40dp"
             android:layout_margin="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/parcel_delivered_img"/>
+            app:layout_constraintTop_toBottomOf="@+id/carpool_onway_img"/>
 
         <TextView
-            android:id="@+id/parcel_delivered_pick_name"
+            android:id="@+id/carpool_onway_pick_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:text="Provided by Gopi"
+            android:text="w/Gopi and 2 others"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/parcel_delivered_matching"
-            app:layout_constraintStart_toEndOf="@+id/parcel_delivered_profile_img"
-            app:layout_constraintTop_toBottomOf="@+id/parcel_delivered_name" />
+            app:layout_constraintBottom_toTopOf="@+id/carpool_onway_matching"
+            app:layout_constraintStart_toEndOf="@+id/carpool_onway_profile_img"
+            app:layout_constraintTop_toBottomOf="@+id/carpool_onway_name" />
+
+        <TextView
+            android:id="@+id/carpool_onway_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="ETA: 3 hr"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/carpool_onway_matching"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/carpool_onway_name" />
 
         <ImageView
-            android:id="@+id/parcel_delivered_matching_img"
+            android:id="@+id/carpool_onway_matching_img"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="10dp"
-            android:src="@drawable/ic_finish"
+            android:src="@drawable/ic_onway"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:tint="@color/green" />
 
         <TextView
-            android:id="@+id/parcel_delivered_matching"
+            android:id="@+id/carpool_onway_matching"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
-            android:text="@string/delivered"
+            android:text="@string/riding"
             android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/parcel_delivered_matching_img" />
+            app:layout_constraintStart_toEndOf="@+id/carpool_onway_matching_img" />
 
         <Button
-            android:id="@+id/parcel_delivered_btn"
+            android:id="@+id/carpool_onway_btn"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
-            android:text="@string/finish"
+            android:text="@string/track_me"
             android:background="@drawable/round_button"
             app:backgroundTint="@color/green"
             app:layout_constraintBottom_toBottomOf="parent"
