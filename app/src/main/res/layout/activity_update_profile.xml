@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".UpdateProfile">
+
+    <TextView
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageView"
+        android:layout_width="142dp"
+        android:layout_height="142dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+
+    <TextView
+        android:id="@+id/full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Parth Katrodiya"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/profile" />
+
+    <TextView
+        android:id="@+id/ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="4.2/5"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/full_name" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="@id/second_constraint"
+        app:layout_constraintTop_toTopOf="@id/second_constraint" />
+
+    <EditText
+        android:id="@+id/update_name"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="@id/second_constraint"
+        app:layout_constraintStart_toStartOf="@id/second_constraint"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/text_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Email"
+        app:layout_constraintStart_toStartOf="@id/second_constraint"
+        app:layout_constraintTop_toBottomOf="@id/update_name" />
+
+    <EditText
+        android:id="@+id/update_email"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="@id/second_constraint"
+        app:layout_constraintStart_toStartOf="@id/second_constraint"
+        app:layout_constraintTop_toBottomOf="@+id/text_email" />
+
+
+    <TextView
+        android:id="@+id/text_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Number"
+        app:layout_constraintStart_toStartOf="@id/second_constraint"
+        app:layout_constraintTop_toBottomOf="@id/update_email" />
+
+    <EditText
+        android:id="@+id/update_number"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@id/second_constraint"
+        app:layout_constraintStart_toStartOf="@id/second_constraint"
+        app:layout_constraintTop_toBottomOf="@+id/text_number" />
+
+    <TextView
+        android:id="@+id/text_Address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Address"
+        app:layout_constraintStart_toStartOf="@id/second_constraint"
+        app:layout_constraintTop_toBottomOf="@id/update_number" />
+
+    <EditText
+        android:id="@+id/update_address"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Address"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@id/second_constraint"
+        app:layout_constraintStart_toStartOf="@id/second_constraint"
+        app:layout_constraintTop_toBottomOf="@+id/text_Address" />
+
+    <TextView
+        android:id="@+id/text_Password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Change Password"
+        app:layout_constraintStart_toStartOf="@id/second_constraint"
+        app:layout_constraintTop_toBottomOf="@id/update_address" />
+
+    <EditText
+        android:id="@+id/update_password"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Change Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@id/second_constraint"
+        app:layout_constraintStart_toStartOf="@id/second_constraint"
+        app:layout_constraintTop_toBottomOf="@+id/text_Password" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Edit Profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/second_constraint"
+        app:layout_constraintTop_toBottomOf="@+id/update_password" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/second_constraint"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
