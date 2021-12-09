@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".signup"
-    android:padding="10dp">
+    android:padding="10dp"
+    tools:context=".signup">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Create New Account"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginTop="32dp"/>
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_background"
         android:hint="Name"
         android:inputType="text"
-        android:minHeight="48dp"
-        android:background="@drawable/edit_text_background"/>
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_background"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:background="@drawable/edit_text_background"/>
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/mobile_number"
@@ -42,29 +41,29 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/edit_text_background"
+        android:hint="Mobile Number"
         android:inputType="number"
-        android:minHeight="48dp"
-        android:hint="Mobile Number"/>
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_background"
         android:hint="Password"
         android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:background="@drawable/edit_text_background"/>
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/confirm_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_background"
         android:hint="Confirm Password"
         android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:background="@drawable/edit_text_background"/>
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/sign_up_button"
@@ -72,18 +71,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="80dp"
-        android:text="Sign Up"
-        android:background="@drawable/round_button"/>
+        android:background="@drawable/round_button"
+        android:text="Sign Up" />
 
     <TextView
         android:id="@+id/sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign In"
         android:layout_gravity="center"
-        android:textSize="16sp"
         android:layout_marginTop="8dp"
-        android:textStyle="bold"
-        android:textColor="@color/green"/>
+        android:text="Sign In"
+        android:textColor="@color/green"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
