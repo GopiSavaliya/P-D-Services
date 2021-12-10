@@ -68,9 +68,7 @@ public class UpdateProfile extends AppCompatActivity {
                 Name.setText(value.getString("Name"));
                 Email.setText(value.getString("Email"));
                 Number.setText(value.getString("Phone"));
-
-
-
+                Address.setText(value.getString("Address"));
             }
         });
 
@@ -131,6 +129,7 @@ public class UpdateProfile extends AppCompatActivity {
                         edited.put("Name", Name.getText().toString());
                         edited.put("Email", email);
                         edited.put("Phone", Number.getText().toString());
+                        edited.put("Address", Address.getText().toString());
 
                         docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override

@@ -27,7 +27,7 @@ import java.util.Map;
 
 public class signup extends AppCompatActivity {
 
-    EditText name, email, number, password, confirmPassword;
+    EditText name, email, number, password, confirmPassword, address;
 
     Button btnSignUp;
 
@@ -46,6 +46,7 @@ public class signup extends AppCompatActivity {
         number = findViewById(R.id.mobile_number);
         password = findViewById(R.id.password);
         confirmPassword = findViewById(R.id.confirm_password);
+        address = findViewById(R.id.address);
 
         btnSignUp = findViewById(R.id.sign_up_button);
         signIn = findViewById(R.id.sign_in);
@@ -66,8 +67,9 @@ public class signup extends AppCompatActivity {
                 String Number = number.getText().toString();
                 String Password = password.getText().toString();
                 String cPassword = confirmPassword.getText().toString();
+                String Address = address.getText().toString();
 
-                if(Name.equals("") || Email.equals("") || Number.equals("") || Password.equals("") || cPassword.equals("")){
+                if(Name.equals("") || Email.equals("") || Number.equals("") || Password.equals("") || cPassword.equals("") || Address.equals("")){
                     Toast.makeText(signup.this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
                 }else{
                     if(Password.equals(cPassword)){
@@ -78,9 +80,6 @@ public class signup extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if(task.isSuccessful()){
-                                        Toast.makeText(signup.this, "Signed Up Successfully!", Toast.LENGTH_SHORT).show();
-
-
 
                                         userId = mAuth.getCurrentUser().getUid();
                                         DocumentReference documentReference = fStore.collection("users").document(userId);
@@ -89,6 +88,7 @@ public class signup extends AppCompatActivity {
                                         user.put("Name", Name);
                                         user.put("Email", Email);
                                         user.put("Phone", Number);
+                                        user.put("Address", Address);
 
                                         documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
@@ -102,10 +102,13 @@ public class signup extends AppCompatActivity {
 
                                             }
                                         });
+
+                                        Toast.makeText(signup.this, "Signed Up Successfully!", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                         startActivity(intent);
                                     }else{
                                         Toast.makeText(signup.this, "Registration Failed!", Toast.LENGTH_SHORT).show();
+                                        return;
                                     }
                                 }
                             });

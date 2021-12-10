@@ -24,7 +24,8 @@
         android:layout_height="142dp"
         android:layout_margin="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile" />
+        app:layout_constraintTop_toBottomOf="@+id/profile"
+        android:src="@drawable/men"/>
 
 
     <TextView
@@ -130,7 +131,6 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/edit_text_background"
         android:hint="Address"
-        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@id/second_constraint"
         app:layout_constraintStart_toStartOf="@id/second_constraint"
         app:layout_constraintTop_toBottomOf="@+id/text_Address" />
