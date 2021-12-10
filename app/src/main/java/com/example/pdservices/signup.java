@@ -1,8 +1,5 @@
 package com.example.pdservices;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -54,7 +54,7 @@ public class signup extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-        if(mAuth.getCurrentUser() != null){
+        if (mAuth.getCurrentUser() != null) {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
             finish();
@@ -69,17 +69,17 @@ public class signup extends AppCompatActivity {
                 String cPassword = confirmPassword.getText().toString();
                 String Address = address.getText().toString();
 
-                if(Name.equals("") || Email.equals("") || Number.equals("") || Password.equals("") || cPassword.equals("") || Address.equals("")){
+                if (Name.equals("") || Email.equals("") || Number.equals("") || Password.equals("") || cPassword.equals("") || Address.equals("")) {
                     Toast.makeText(signup.this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
-                }else{
-                    if(Password.equals(cPassword)){
-                        if(Password.length() < 6){
+                } else {
+                    if (Password.equals(cPassword)) {
+                        if (Password.length() < 6) {
                             Toast.makeText(signup.this, "Password is too short!", Toast.LENGTH_SHORT).show();
-                        }else{
+                        } else {
                             mAuth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if(task.isSuccessful()){
+                                    if (task.isSuccessful()) {
 
                                         userId = mAuth.getCurrentUser().getUid();
                                         DocumentReference documentReference = fStore.collection("users").document(userId);
@@ -93,12 +93,12 @@ public class signup extends AppCompatActivity {
                                         documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void unused) {
-                                                Log.d("TAG:","Success! "+userId);
+                                                Log.d("TAG:", "Success! " + userId);
                                             }
                                         }).addOnFailureListener(new OnFailureListener() {
                                             @Override
                                             public void onFailure(@NonNull Exception e) {
-                                                Log.d("TAG:","Failure: "+e.toString());
+                                                Log.d("TAG:", "Failure: " + e.toString());
 
                                             }
                                         });
@@ -106,7 +106,7 @@ public class signup extends AppCompatActivity {
                                         Toast.makeText(signup.this, "Signed Up Successfully!", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                         startActivity(intent);
-                                    }else{
+                                    } else {
                                         Toast.makeText(signup.this, "Registration Failed!", Toast.LENGTH_SHORT).show();
                                         return;
                                     }
@@ -114,7 +114,7 @@ public class signup extends AppCompatActivity {
                             });
                         }
 
-                    }else{
+                    } else {
                         Toast.makeText(signup.this, "Password Not Matching!", Toast.LENGTH_SHORT).show();
                     }
                 }

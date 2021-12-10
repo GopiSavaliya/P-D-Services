@@ -23,9 +23,9 @@
         android:layout_width="142dp"
         android:layout_height="142dp"
         android:layout_margin="16dp"
+        android:src="@drawable/men"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile"
-        android:src="@drawable/men"/>
+        app:layout_constraintTop_toBottomOf="@+id/profile" />
 
 
     <TextView
@@ -134,7 +134,6 @@
         app:layout_constraintEnd_toEndOf="@id/second_constraint"
         app:layout_constraintStart_toStartOf="@id/second_constraint"
         app:layout_constraintTop_toBottomOf="@+id/text_Address" />
-
 
 
     <Button
