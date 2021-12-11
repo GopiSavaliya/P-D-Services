@@ -311,13 +311,13 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-              <CheckBox
-                  android:id="@+id/checkBox3"
+              <RadioButton
+                  android:id="@+id/radioButton3"
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_weight="1"
                   android:fontFamily="@font/inter_normal"
-                  android:text="Mahiraj Rahod"
+                  android:text="Mahiraj Rathod"
                   app:buttonTint="#000000" />
 
               <TextView
