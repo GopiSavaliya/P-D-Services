@@ -82,17 +82,16 @@ public class RequestCarPool2 extends AppCompatActivity {
                                    requestMap.put("Charge", map.get("Charge").toString());
                                    userId = map.get("UserId").toString();
                                    requestMap.put("UserId", userId);
-                                   arrayList.add(requestMap);
-                                   requestCPAdapter = new RequestCPAdapter(arrayList, RequestCarPool2.this);
-                                   carpool_requests_list.setAdapter(requestCPAdapter);
-                                   carpool_requests_list.setLayoutManager(new LinearLayoutManager(RequestCarPool2.this));
                                    FirebaseFirestore store = FirebaseFirestore.getInstance();
                                    DocumentReference documentReference = store.collection("users").document(userId);
                                    documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
                                        @Override
                                        public void onEvent(@Nullable @org.jetbrains.annotations.Nullable DocumentSnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
                                            requestMap.put("Name", value.get("Name"));
-
+                                           arrayList.add(requestMap);
+                                           requestCPAdapter = new RequestCPAdapter(arrayList, RequestCarPool2.this);
+                                           carpool_requests_list.setAdapter(requestCPAdapter);
+                                           carpool_requests_list.setLayoutManager(new LinearLayoutManager(RequestCarPool2.this));
                                        }
                                    });
                                }
