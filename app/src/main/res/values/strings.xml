@@ -34,4 +34,11 @@
     <string name="activate_car_mode">Activate Car Mode</string>
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
+    <string name="cancel">Cancel</string>
+    <string name="carpool">CarPool</string>
+    <string name="next">Next</string>
+    <string name="dd_mm_yyyy">DD/MM/YYYY</string>
+    <string name="hh_mm_ss">hh:mm:ss</string>
+    <string name="request">Request</string>
+    <string name="parcel">Parcel</string>
 </resources>

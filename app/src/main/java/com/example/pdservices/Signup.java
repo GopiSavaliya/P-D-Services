@@ -25,7 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-public class signup extends AppCompatActivity {
+public class Signup extends AppCompatActivity {
 
     EditText name, email, number, password, confirmPassword, address;
 
@@ -70,11 +70,11 @@ public class signup extends AppCompatActivity {
                 String Address = address.getText().toString();
 
                 if (Name.equals("") || Email.equals("") || Number.equals("") || Password.equals("") || cPassword.equals("") || Address.equals("")) {
-                    Toast.makeText(signup.this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Signup.this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
                 } else {
                     if (Password.equals(cPassword)) {
                         if (Password.length() < 6) {
-                            Toast.makeText(signup.this, "Password is too short!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Signup.this, "Password is too short!", Toast.LENGTH_SHORT).show();
                         } else {
                             mAuth.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
@@ -103,11 +103,11 @@ public class signup extends AppCompatActivity {
                                             }
                                         });
 
-                                        Toast.makeText(signup.this, "Signed Up Successfully!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Signup.this, "Signed Up Successfully!", Toast.LENGTH_SHORT).show();
                                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                         startActivity(intent);
                                     } else {
-                                        Toast.makeText(signup.this, "Registration Failed!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Signup.this, "Registration Failed!", Toast.LENGTH_SHORT).show();
                                         return;
                                     }
                                 }
@@ -115,7 +115,7 @@ public class signup extends AppCompatActivity {
                         }
 
                     } else {
-                        Toast.makeText(signup.this, "Password Not Matching!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Signup.this, "Password Not Matching!", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

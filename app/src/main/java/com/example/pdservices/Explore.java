@@ -1,12 +1,17 @@
 package com.example.pdservices;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +28,9 @@ public class Explore extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    View exploreView;
+    Button btn_scheduleRide, btn_requestPool, btn_requestParcel;
 
     public Explore() {
         // Required empty public constructor
@@ -59,6 +67,32 @@ public class Explore extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_explore, container, false);
+        exploreView = inflater.inflate(R.layout.fragment_explore, container, false);
+
+        btn_scheduleRide = exploreView.findViewById(R.id.btn_scheduleRide);
+        btn_scheduleRide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e("User:", FirebaseAuth.getInstance().getUid());
+                startActivity(new Intent(exploreView.getContext(), ScheduleRide.class));
+            }
+        });
+
+        btn_requestPool = exploreView.findViewById(R.id.btn_requestPool);
+        btn_requestPool.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(exploreView.getContext(), RequestCarPool1.class));
+            }
+        });
+
+        btn_requestParcel = exploreView.findViewById(R.id.btn_requestParcel);
+        btn_requestParcel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(exploreView.getContext(), RequestParcel1.class));
+            }
+        });
+        return exploreView;
     }
 }

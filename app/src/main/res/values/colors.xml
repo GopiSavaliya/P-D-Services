@@ -10,4 +10,5 @@
     <color name="green">#00B96B</color>
     <color name="error">#DC0000</color>
     <color name="edittext">#F5F5F5</color>
+    <color name="grey">#808080</color>
 </resources>
